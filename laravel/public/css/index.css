@@ -1,0 +1,436 @@
+
+html {
+    /*这样好计算 1rem=10px*/
+    font-size: 62.5%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #ca0c16;
+}
+
+h6 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h6::before {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 0.8rem;
+    content: '';
+    width: 0.2rem;
+    height: 1.2rem;
+    vertical-align: -0.3rem;
+    background-color: #ca0c16;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 6.5rem;
+    background: url("../images/header.png");
+
+}
+
+.header_left {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-left: 5%;
+    margin-top: 1.8rem;
+    width: 25%;
+}
+
+.header_left a {
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+.header_left_desc {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    color: #b8b8b8;
+}
+
+.header_right {
+    float: right;
+    margin-top: 2.4rem;
+    margin-right: 4rem;
+    padding: 0.5rem;
+}
+
+.header_right a {
+    height: 2.8rem;
+    color: #fff;
+}
+
+/*网页主体左边部分*/
+.left {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    border-left: 0.05rem solid #eae2ff;
+    border-right: 0.5rem solid #eae2ff;
+    width: 22%;
+    margin-left: 5%;
+    background-color: white;
+}
+
+/*左边第一块*/
+.left-first {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    margin-left: 1.2rem;
+}
+
+.left-first img {
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.left-first-uname {
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+/*左边第二块*/
+.left-second {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 0.05rem solid #eae2ff;
+    border-bottom: 0.05rem solid #eae2ff;
+}
+
+.left-second dl {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.left-second dl a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*左边第三块*/
+.left-third {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.05rem solid #eae2ff;
+}
+
+.third-div {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+.third-div span {
+    margin-bottom: 0.5rem;
+}
+
+/*
+第四块
+*/
+.left-four {
+    width: 100%;
+}
+
+.left-four img {
+    width: 100%;
+    height: 15rem;
+}
+
+.left-guidang {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.05rem solid #eae2ff;
+}
+
+.left-guidang-div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+
+}
+
+.left-guidang-div span {
+    font-size: 1rem;
+    margin-left: 10rem;
+    color: #858585;
+}
+
+.left-hot {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1rem solid #eae2ff;
+}
+
+.left-hot-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    color: #333;
+}
+
+.left-hot-div span {
+    margin-top: 0.1rem;
+    font-size: 0.8rem;
+    color: #858585;
+}
+
+.right {
+    float: left;
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.right-banner {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    border-bottom: 0.05rem solid #eae2ff;
+    padding: 1rem;
+}
+
+.right-banner span {
+    color: #4d4d4d;
+}
+
+.banner-right {
+    padding-left: 37rem;
+}
+
+.banner-right a {
+    margin-left: 1rem;
+}
+
+.banner-right span {
+    color: #858585;
+}
+
+.right-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.4rem;
+    border-bottom: 0.05rem solid #eae2ff;
+    padding-bottom: 1rem;
+}
+
+.right-h4 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.right-h4 a {
+    font-size: 1.2rem;
+}
+
+.right-content {
+    font-size: 1rem;
+    color: #858585;
+}
+
+.right-content a:hover {
+    text-decoration: none;
+    color: #858585;
+}
+
+.right-comment {
+    font-size: 1rem;
+    color: #858585;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.right-comment span {
+    margin-right: 1.5rem;
+}
+
+/*右侧文章详情部分*/
+
+.right-detail-title {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    border-bottom: 0.01rem solid #e3edef;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+.right-detail-title span {
+    font-size: 1.7rem;
+    color: #000000;
+}
+
+.right-detail-title-contents {
+    float: left;
+    display: block;
+    flex-direction: row;
+    font-size: 1.5rem;
+    color: #5e6687;
+}
+
+.right-detail-title-contents img {
+    float: left;
+    width: 600px;
+    height: 350px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.right-detail-title-contents-attachement span {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 90%;
+    margin-bottom: 0.05rem;
+    font-size: 1.3rem;
+
+}
+
+.right-detail-title-contents-attachement a {
+    float: left;
+    display: block;
+    flex-direction: column;
+    margin-left: 92%;
+    margin-bottom: 0.05rem;
+    font-size: 1.3rem;
+
+}
+
+.right-detail-title-comment {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    border: 0.01rem solid #efecec;
+    color: #35352f;
+    background: #f1f4f7;
+}
+
+.right-detail-title-comment-keywords {
+    float: inherit;
+}
+
+.right-detail-title-comment-keywords span {
+    font-size: 1.3rem;
+    padding-right: 5rem;
+}
+
+.right-detail-title-comment-read {
+    float: inherit;
+    margin-top: 0.5rem;
+}
+
+.right-detail-title-comment-read span {
+    font-size: 1.3rem;
+    padding-right: 5rem;
+}
+
+/*最新评论*/
+.right-detail-comment-relation {
+    float: inherit;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-left: 2rem;
+}
+
+.right-detail-comment-relation span {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-bottom: 0.01rem solid #dbdfef;
+}
+
+.right-detail-comment-relation div {
+    background: #f1f4f7;
+    border-bottom: 0.01rem solid #dbdfef;
+    padding-left: 0.5rem;
+}
+
+/*相关推荐*/
+.right-detail-recommendation {
+    float: inherit;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-top: 0.01rem solid #efecec;
+    margin-left: 2rem;
+}
+
+.right-detail-recommendation span {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-bottom: 0.01rem solid #dbdfef;
+}
+
+.right-detail-recommendation-inner {
+    padding-left: 0.5rem;
+    border-bottom: 0.01rem solid #dbdfef;
+    background: #f1f4f7;
+}
+
+/*底部标示*/
+
+.footer-top {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-content: flex-start;
+}
+
+.footer-top p {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
