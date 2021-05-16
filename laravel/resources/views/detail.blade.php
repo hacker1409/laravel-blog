@@ -52,21 +52,48 @@
         <!--评论相关-->
         <div class="right-detail-comment-relation">
             <span><h3>最新评论</h3></span>
-            <div class="right-detail-comment-relation1">
-                <p><a href="" target="">2写的不错，继续加油</a></p>
+
+            <div class='right-detail-comment-relation-submit-form'>
+                <form>
+                    <textarea placeholder="请留下您宝贵的评论" rows="8" cols="100%" style="resize:none;"></textarea>
+                </form>
+                <button type="button">发表</button>
             </div>
-            <div class="right-detail-comment-relation1">
-                <p><a href="" target="">3写的不错，继续加油</a></p>
+
+            <div class="right-detail-comment-relation-inner">
+                <ul class="">
+                    <li>
+                        <div style="display: flex;width: 100%;">
+                            <a target="_blank" href="">
+                                <img src="http://laravel-test.com/images/header.png" class=""
+                                     style="border-radius: 30px; width: 32px;height: 32px">
+                            </a>
+                            <div class="right-detail-comment-relation-inner-box">
+                                <a target="_blank" href="">爱码士 weixin_48447581</a>
+                                <span class="right-detail-comment-relation-inner-box-comments">不错，感谢</span>
+                                <span class="right-detail-comment-relation-inner-box-comment-date">2020-05-16 17:18:38</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="">
+                    <li>
+                        <div style="display: flex;width: 100%;">
+                            <a target="_blank" href="">
+                                <img src="http://laravel-test.com/images/header.png" class=""
+                                     style="border-radius: 30px; width: 32px;height: 32px">
+                            </a>
+                            <div class="right-detail-comment-relation-inner-box">
+                                <a target="_blank" href="">爱码士2 weixin_48447581</a>
+                                <span> : </span>
+                                <span class="right-detail-comment-relation-inner-box-comments">不错，感谢</span>
+                                <span class="right-detail-comment-relation-inner-box-comment-date">2020-05-16 17:18:38</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="right-detail-comment-relation1">
-                <p><a href="" target="">4写的不错，继续加油</a></p>
-            </div>
-            <div class="right-detail-comment-relation1">
-                <p><a href="" target="">good! 写的不错，继续加油</a></p>
-            </div>
-            <div class="right-detail-comment-relation1">
-                <p><a href="" target="">33写的不错，继续加油</a></p>
-            </div>
+
         </div>
 
         <!--相关推荐-->

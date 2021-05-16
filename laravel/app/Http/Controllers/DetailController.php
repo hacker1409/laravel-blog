@@ -19,7 +19,7 @@ class DetailController extends Controller
             $title->attachments[$idx]['name'] = '测试名称';
         }
         $title->attachments[1]['url'] = $attach;
-        $title->attachments[1]['name'] = '测试名称2';
+        $title->attachments[1]['name'] = '测试名称12';
         $titles = DB::table('titles')->limit(8)->get();
         return view('detail', compact('title', 'titles'));
     }

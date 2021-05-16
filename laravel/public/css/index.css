@@ -20,6 +20,19 @@ a:hover {
     color: #ca0c16;
 }
 
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px dotted #ccc;
+}
+
 h6 {
     font-size: 1rem;
     margin-top: 1rem;
@@ -308,6 +321,10 @@ h6::before {
     color: #000000;
 }
 
+.right-detail-title span a {
+    font-size: 1.7rem;
+}
+
 .right-detail-title-contents {
     float: left;
     display: block;
@@ -362,11 +379,13 @@ h6::before {
 .right-detail-title-comment-keywords span {
     font-size: 1.3rem;
     padding-right: 5rem;
+    padding-left: 1rem;
 }
 
 .right-detail-title-comment-read {
     float: inherit;
     margin-top: 0.5rem;
+    padding-left: 1rem;
 }
 
 .right-detail-title-comment-read span {
@@ -386,13 +405,57 @@ h6::before {
 .right-detail-comment-relation span {
     font-size: 1.3rem;
     margin-top: 2rem;
-    border-bottom: 0.01rem solid #dbdfef;
 }
 
-.right-detail-comment-relation div {
-    background: #f1f4f7;
-    border-bottom: 0.01rem solid #dbdfef;
-    padding-left: 0.5rem;
+.right-detail-comment-relation-submit-form {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    margin-bottom: 2rem;
+}
+
+.right-detail-comment-relation-submit-form button {
+    float: left;
+    text-decoration: none;
+    margin-left: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-top: 8rem;
+    border-radius: 3.8rem;
+    color: white;
+    background: #d05f2d;
+}
+
+.right-detail-comment-relation-inner {
+    margin-left: 1rem;
+}
+
+.right-detail-comment-relation-inner ul {
+    margin-bottom: 1rem;
+}
+
+.right-detail-comment-relation-inner-box {
+    align-content: center;
+    margin: auto 1rem;
+}
+
+.right-detail-comment-relation-inner-box a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.right-detail-comment-relation-inner-box span {
+    font-size: 1.5rem;
+}
+
+.right-detail-comment-relation-inner-box-comments {
+    margin-left: 1rem;
+}
+
+.right-detail-comment-relation-inner-box-comment-date {
+    margin-left: 5rem;
 }
 
 /*相关推荐*/
@@ -401,7 +464,6 @@ h6::before {
     display: flex;
     flex-direction: column;
     height: auto;
-    border-top: 0.01rem solid #efecec;
     margin-left: 2rem;
 }
 
@@ -412,7 +474,7 @@ h6::before {
 }
 
 .right-detail-recommendation-inner {
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     border-bottom: 0.01rem solid #dbdfef;
     background: #f1f4f7;
 }
