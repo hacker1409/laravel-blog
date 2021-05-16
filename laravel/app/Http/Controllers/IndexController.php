@@ -10,7 +10,7 @@ class IndexController extends Controller
     //
     public function show()
     {
-        $titles = DB::table('titles')->get();
+        $titles = DB::table('artitles')->orderByDesc('id')->get();
         return view('index', compact('titles'));
     }
 }

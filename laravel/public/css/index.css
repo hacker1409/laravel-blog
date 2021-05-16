@@ -1,7 +1,7 @@
 
 html {
     /*这样好计算 1rem=10px*/
-    font-size: 62.5%
+    font-size: 62.5%;
 }
 
 body {
@@ -331,6 +331,7 @@ h6::before {
     flex-direction: row;
     font-size: 1.5rem;
     color: #5e6687;
+    margin-left: 2rem;
 }
 
 .right-detail-title-contents img {

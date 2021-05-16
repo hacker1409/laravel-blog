@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        DB::table('titles')->insert([
+        DB::table('artitles')->insert([
             'title' => '1这是我的标题-' . Str::random(10),
             'sub_title' => '子标题-' . Str::random(5),
             'contents' => '  1. 索引是什么？<br/></n>

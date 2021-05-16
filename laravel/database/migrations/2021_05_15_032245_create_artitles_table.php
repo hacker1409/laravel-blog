@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTitlesTable extends Migration
+class CreateArtitlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTitlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('titles', function (Blueprint $table) {
+        Schema::create('artitles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 64)->comment('文章标题');
             $table->string('sub_title', 128)->comment('文章子标题');

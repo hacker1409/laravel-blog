@@ -15,3 +15,8 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', 'IndexController@show');
 Route::get('detail/{id}', 'DetailController@show');
+Route::get('form/show', function () {
+    return view('form', []);
+});
+
+Route::post('artitle/save', 'ArtitleController@save');

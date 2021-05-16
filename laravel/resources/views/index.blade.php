@@ -15,7 +15,8 @@
     <div class="right">
         <div class="right-banner">
             <span>
-                <input type="checkbox">只看原创
+                <a href="{{asset('form/show')}}"
+                   style="font-size:1rem; margin-left: 0.5rem;color: #ffffff;background: #d05f2d;border-radius: 20%">新增文章</a>
             </span>
             <div class="banner-right">
                 <span>排序:&nbsp;</span>
