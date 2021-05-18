@@ -20,21 +20,29 @@
             </span>
             <div class="banner-right">
                 <span>排序:&nbsp;</span>
-                <a href="" style="color: #ca0c16">默认</a>
-                <a href="">按更新时间</a>
-                <a href="">按访问量</a>
+                <a href="{{asset('/')}}/id" style="color: #ca0c16" id="default_order">默认</a>
+                <a href="{{asset('/')}}/update_time" id="time_order">按更新时间</a>
             </div>
         </div>
-        @foreach ($titles as $title)
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#time_order").click(function () {
+                    $("#time_order").css("color", "red");
+                    $("#default_order").css("color", "blue");
+                });
+            });
+        </script>
+
+        @foreach ($articles as $article)
             <div class="right-div">
                 <h4 class="right-h4">
-                    <a href="{{asset('detail')}}/{{$title->id}}" target="">{{$title->title}}</a>
+                    <a href="{{asset('detail')}}/{{$article->id}}" target="_blank">{{$article->name}}</a>
                 </h4>
                 <p class="right-content">
-                    <a href="index.html">{{$title->sub_title}}</a>
+                    <a href="{{asset('detail')}}/{{$article->id}}" target="_blank">{{$article->summary}}</a>
                 </p>
                 <div class="right-comment">
-                    <span>{{$title->created_at}}</span>
+                    <span>{{$article->create_time}}</span>
                     <span>阅读数：7 </span>
                     <span>评论数：0</span>
                 </div>

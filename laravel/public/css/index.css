@@ -8,6 +8,8 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 a {
@@ -327,17 +329,24 @@ h6::before {
 
 .right-detail-title-contents {
     float: left;
-    display: block;
+    display: inline-block;
     flex-direction: row;
     font-size: 1.5rem;
     color: #5e6687;
     margin-left: 2rem;
 }
 
+.right-detail-title-contents span {
+    float: left;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
 .right-detail-title-contents img {
     float: left;
-    width: 600px;
-    height: 350px;
+    /*width: 600px;*/
+    /*height: 350px;*/
     margin-left: 2rem;
     margin-bottom: 2rem;
     display: block;
@@ -404,7 +413,6 @@ h6::before {
 }
 
 .right-detail-comment-relation span {
-    font-size: 1.3rem;
     margin-top: 2rem;
 }
 
@@ -433,7 +441,8 @@ h6::before {
 }
 
 .right-detail-comment-relation-inner ul {
-    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .right-detail-comment-relation-inner-box {
@@ -448,15 +457,40 @@ h6::before {
 }
 
 .right-detail-comment-relation-inner-box span {
-    font-size: 1.5rem;
 }
 
 .right-detail-comment-relation-inner-box-comments {
     margin-left: 1rem;
+    font-size: 1.5rem;
 }
 
 .right-detail-comment-relation-inner-box-comment-date {
-    margin-left: 5rem;
+    margin-left: 1rem;
+    color: #6b6b6b;
+    border-radius: 20%;
+    font-size: 1rem;
+}
+
+/*评论分页样式*/
+.comment-pagination {
+    padding-top: 0.1rem;
+    /*text-align: center;*/
+}
+
+.comment-pagination ul > li {
+    display: inline-block;
+    margin: 0.2rem 5rem 0.5rem 0.5rem;
+}
+
+.comment-pagination ul > li > a {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background: #f1f4f7;
+}
+
+.comment-pagination ul > li > a:hover {
+    background-color: #f7fffc;
+
 }
 
 /*相关推荐*/

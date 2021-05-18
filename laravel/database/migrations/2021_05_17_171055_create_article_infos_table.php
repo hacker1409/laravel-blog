@@ -15,7 +15,7 @@ class CreateArticleInfosTable extends Migration
     {
         Schema::create('article_infos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('artitle_id')->index('artitle_id')->nullable(false)->comment('文章id');
+            $table->bigInteger('article_id')->index('article_id')->nullable(false)->comment('文章id');
             $table->text('contents')->comment('文章内容');
             $table->timestamp('create_time')->comment('创建时间');
             $table->timestamp('update_time')->comment('修改时间');

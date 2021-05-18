@@ -14,8 +14,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <div style="float: left;display:flex;flex-direction: column;margin-left: 1rem;">
         <form method="post" id="save_title">
-            <p>文章标题: <input type="text" name="title" value=""/></p>
-            <p>子标题: <input type="text" name="sub_title" value=""/></p>
+            <p>标题: <input type="text" name="title" value=""/></p>
+            <p>概要: <input type="text" name="summary" value=""/></p>
             <p>关键字: <input type="text" name="key_words" value="" placeholder="多个以英文;分号分割"/></p>
             <p>缩略图: <input type="text" name="thumbs"/></p>
             <p>附件: <input type="text" name="attachments"/></p>
@@ -32,15 +32,14 @@
                 }
             });
             $("#submit_title").click(function () {
-                var title = $('input[name="title"]').val();
-                var sub_title = $('input[name="title"]').val();
-                var key_words = $('input[name="key_words"]').val();
+                var name = $('input[name="title"]').val();
+                var summary = $('input[name="summary"]').val();
                 var contents = $('textarea[name="contents"]').val();
-                $.post("{{asset('artitle/save')}}",
+                $.post("{{asset('article/save')}}",
                     {
-                        title: title,
-                        sub_title: sub_title,
-                        key_words: key_words,
+                        name: name,
+                        type: 1,
+                        summary: summary,
                         contents: contents,
                     },
                     function (data, status) {
