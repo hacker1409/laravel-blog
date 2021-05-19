@@ -13,6 +13,7 @@
 
 //文章相关
 Route::get('/{order?}', 'ArticleController@showList');
+Route::get('article/ajaxShow/{page?}', 'ArticleController@ajaxShowList');
 //Route::get('list/', 'ArticleController@showList');
 Route::get('detail/{id}', 'ArticleController@showDetail');
 

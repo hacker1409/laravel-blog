@@ -9,15 +9,6 @@
     <title> @yield('main_title')</title>
     <link href="{{asset('css/index.css')}}" rel="stylesheet">
     <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
-    <script type="text/javascript">
-        $(document).scroll(function () {
-            var scroH = $(document).scrollTop();  //滚动高度
-            var viewH = $(window).height();  //可见高度
-            if (viewH - scroH <= 0) {
-                // alert("滚动到底部事件触发");
-            }
-        })
-    </script>
 </head>
 
 <body>

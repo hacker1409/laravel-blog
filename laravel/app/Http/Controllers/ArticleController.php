@@ -6,7 +6,6 @@ use App\Article;
 use App\Comment;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 
 class ArticleController extends Controller
@@ -17,8 +16,19 @@ class ArticleController extends Controller
         if (!in_array($order, ['id', 'update_time'])) {
             $order = 'id';
         }
-        $articles = (new Article())->getArticleList($order);
-        return view('index', compact('articles'));
+        $ret = (new Article())->getArticleList(0);
+        $articles = $ret['list'];
+        $total = $ret['total'];
+        return view('index', compact('articles', 'total'));
+    }
+
+    public function ajaxShowList($page = 1)
+    {
+        $offset = ($page - 1) * 15;
+        $ret = (new Article())->getArticleList($offset);
+        $articles = $ret['list'];
+        $total = $ret['total'];
+        return compact('articles', 'total');
     }
 
 
@@ -58,7 +68,7 @@ class ArticleController extends Controller
             //文章推荐
             $articles = $model->getRandArticles($recommand_ids);
         }
-        return view('detail', compact('article_info', 'articles', 'comment_list','comment_total'));
+        return view('detail', compact('article_info', 'articles', 'comment_list', 'comment_total'));
     }
 
     public function save(Request $request)
@@ -67,10 +77,8 @@ class ArticleController extends Controller
         $summary = $request->post('summary');
         $contents = $request->post('contents');
         $type = $request->post('type', 1);
-        $user_id = $request->post('user_id', 88);
-        $data = compact('name', 'summary', 'type', 'user_id', 'contents');
-        $data['create_time'] = date('Y-m-d H:i:s');
-        $ret = DB::table('articles')->insertGetId($data);
+        $user_id = $request->post('user_id', 1);
+        $ret = (new Article())->saveArticle($name, $summary, $type, $user_id, $contents);
         if ($ret) {
             return 'success';
         } else {

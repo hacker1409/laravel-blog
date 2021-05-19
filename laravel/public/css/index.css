@@ -235,10 +235,32 @@ h6::before {
 .right {
     float: left;
     width: 70%;
+    height: 100rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    overflow-x: hidden;
+}
+
+.right::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    scrollbar-arrow-color: black;
+
+}
+
+.right::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.right::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    scrollbar-arrow-color: red;
 }
 
 .right-banner {
